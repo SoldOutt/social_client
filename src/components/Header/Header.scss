@@ -1,0 +1,62 @@
+@import '../../App.scss';
+.header {
+    display: flex;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.5rem $pd;
+    justify-content: space-between;
+    align-items: center;
+    .header_logo {
+        h1 {
+        }
+    }
+    .header_search {
+        display: flex;
+        align-items: center;
+        .form_search {
+            display: flex;
+            padding: 0.25rem 0.5rem;
+            border-radius: 2rem;
+            svg {
+                color: #000;
+                font-weight: 600;
+            }
+            input {
+                margin-left: 0.5em;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 1.1rem;
+            }
+            background-color: #fff;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
+    .header_nav {
+        display: flex;
+        .header_nav-item {
+            margin: 0 1rem;
+            color: $second-color;
+            position: relative;
+            &--num {
+                position: absolute;
+                bottom: calc(100% - 0.5rem);
+                left: calc(100% - 0.5rem);
+                background-color: red;
+                border-radius: 50%;
+                width: 1.1rem;
+                height: 1.1rem;
+                text-align: center;
+                line-height: 1.1rem;
+            }
+        }
+        .header_nav-item.active {
+            color: #fff;
+        }
+    }
+}
