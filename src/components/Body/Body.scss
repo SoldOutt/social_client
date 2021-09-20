@@ -1,0 +1,14 @@
+@import '../../App.scss';
+.body {
+    padding: 0 $pd;
+    display: flex;
+    .sideBar {
+        flex: 2;
+    }
+    .feed {
+        flex: 5;
+    }
+    .rightBar {
+        flex: 2;
+    }
+}

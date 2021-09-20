@@ -1,10 +1,12 @@
 $primary-color: #163ffc;
 $important-color: #0000c9;
 $second-color: #e8e9fd;
-$pd: 80px;
+$height-header: 59px;
+$pd: 40px;
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: $second-color;
