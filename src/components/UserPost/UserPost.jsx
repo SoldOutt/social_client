@@ -57,7 +57,7 @@ const UserPost = () => {
                             <span>Photo or video</span>
                         </div>
                         <div className="form_group-select">
-                            <Button variant="contained">Contained</Button>
+                            <Button variant="contained">Post</Button>
                         </div>
                     </div>
                 </form>

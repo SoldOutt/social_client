@@ -1,7 +1,10 @@
 @import '../../App.scss';
 .header {
+    position: fixed;
+    width: 100%;
     display: flex;
     background-color: $primary-color;
+    z-index: 1000;
     color: #fff;
     padding: 0.5rem $pd;
     justify-content: space-between;
@@ -42,6 +45,7 @@
         .header_nav-item {
             margin: 0 1rem;
             color: $second-color;
+            cursor: pointer;
             position: relative;
             &--num {
                 position: absolute;
@@ -53,6 +57,31 @@
                 height: 1.1rem;
                 text-align: center;
                 line-height: 1.1rem;
+            }
+            .header_nav-child {
+                position: absolute;
+                top: 100%;
+                border-radius: $br;
+                background-color: $primary-color;
+                padding: calc(0.5 * #{$pd});
+                right: 0;
+                box-shadow: 0px 1px 1px 3px rgba(0, 0, 0, 0.2);
+                width: max-content;
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-bottom: 1rem;
+                        &:last-child {
+                            margin-bottom: unset;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
             }
         }
         .header_nav-item.active {

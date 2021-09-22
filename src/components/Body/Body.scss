@@ -1,5 +1,7 @@
 @import '../../App.scss';
 .body {
+    position: relative;
+    top: $height-header;
     padding: 0 $pd;
     display: flex;
     .sideBar {

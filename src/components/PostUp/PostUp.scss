@@ -1,0 +1,81 @@
+@import '../../App.scss';
+.post_up {
+    box-shadow: 1px 3px 6px 5px rgba(0, 0, 0, 0.3);
+    border-radius: $br;
+    margin-bottom: $pd;
+    padding: calc(0.5 * #{$pd});
+    .post_up--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: calc(0.5 * #{$pd});
+        .user {
+            display: flex;
+            align-items: center;
+            .user_img {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .user_post_inf {
+                margin-left: 1rem;
+                .user_name {
+                    font-weight: 500;
+                    color: #000;
+                    font-size: 1.1rem;
+                }
+                .time {
+                    color: #acf;
+                }
+            }
+        }
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    .post_up-contain {
+        .desc {
+            margin-bottom: calc(0.5 * #{$pd});
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .post_up-interact {
+        .react {
+            display: flex;
+            margin: calc(0.5 * #{$pd}) 0;
+            align-items: center;
+            svg {
+                cursor: pointer;
+            }
+        }
+        .action {
+            border-top: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            .action_icon {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                border-radius: calc(0.5 * #{$br});
+                cursor: pointer;
+                padding: calc(0.25 * #{$pd});
+                transition: all 0.2s;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+                svg {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

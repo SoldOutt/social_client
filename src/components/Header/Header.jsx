@@ -3,12 +3,14 @@ import SearchIcon from '@mui/icons-material/Search'
 import PersonIcon from '@mui/icons-material/Person'
 import MessageIcon from '@mui/icons-material/Message'
 import NotificationsIcon from '@mui/icons-material/Notifications'
+import AccountCircle from '@mui/icons-material/AccountCircle'
 import './Header.scss'
 const Header = () => {
     const [searchState, setSearchState] = useState('')
     const [newFriends, setNewFriends] = useState([1, 2, 3])
     const [newMessage, setnewMessage] = useState([])
     const [newNotifications, setnewNotifications] = useState([1, 2])
+    const [userMenu, setUserMenu] = useState(false)
     return (
         <Fragment>
             <div className="header">
@@ -67,6 +69,25 @@ const Header = () => {
                         )}
 
                         <NotificationsIcon></NotificationsIcon>
+                    </div>
+                    <div className={`header_nav-item `}>
+                        <AccountCircle
+                            onClick={() => {
+                                setUserMenu(!userMenu)
+                            }}
+                        ></AccountCircle>
+                        {userMenu && (
+                            <div className="header_nav-child">
+                                <ul className="">
+                                    <li>
+                                        <a href="">My profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
