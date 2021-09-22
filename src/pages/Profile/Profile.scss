@@ -1,0 +1,43 @@
+@import '../../App.scss';
+.profile {
+    display: flex;
+    padding-top: $height-header;
+    .sideBar {
+        flex: 2;
+        padding: 0 $pd;
+    }
+    .profile_contain {
+        flex: 7;
+        height: calc(100vh - #{$height-header});
+        overflow-y: auto;
+        padding: 0 calc(0.5 * #{$pd});
+        .profile_header {
+            width: 100%;
+            height: max-content;
+            .profile_bg {
+                width: 100%;
+                height: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .profile_avatar {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                transform: translateY(-40%);
+                img {
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                }
+                h3 {
+                    // margin-top: $pd;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

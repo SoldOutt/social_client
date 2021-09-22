@@ -4,6 +4,7 @@ import UserPost from '../UserPost/UserPost'
 import avatar from '../../assets/avatar.jpg'
 import postImg from '../../assets/postImg.jpg'
 import './Feed.scss'
+import ListPost from '../ListPost/ListPost'
 const Feed = () => {
     const [postState, setPostState] = useState([
         {
@@ -51,11 +52,7 @@ const Feed = () => {
         <Fragment>
             <div className="feed">
                 <UserPost></UserPost>
-                <div className="feed_post">
-                    {postState.map((item, idx) => {
-                        return <PostUp data={item}></PostUp>
-                    })}
-                </div>
+                <ListPost postState={postState}></ListPost>
             </div>
         </Fragment>
     )
