@@ -11,6 +11,10 @@
     align-items: center;
     .header_logo {
         h1 {
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
         }
     }
     .header_search {

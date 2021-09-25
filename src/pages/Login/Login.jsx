@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import FormLogin from './FormLogin'
 import FormRegister from './FormRegister'
 import './Login.scss'
+
 const Login = () => {
     return (
         <Fragment>

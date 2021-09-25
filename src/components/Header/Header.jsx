@@ -4,6 +4,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import MessageIcon from '@mui/icons-material/Message'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import AccountCircle from '@mui/icons-material/AccountCircle'
+import { Link } from 'react-router-dom'
 import './Header.scss'
 const Header = () => {
     const [searchState, setSearchState] = useState('')
@@ -15,7 +16,9 @@ const Header = () => {
         <Fragment>
             <div className="header">
                 <div className="header_logo">
-                    <h1>FakeBook</h1>
+                    <h1>
+                        <Link to="/">FakeBook</Link>
+                    </h1>
                 </div>
                 <div className="header_search">
                     <div className="form_search">
@@ -80,10 +83,10 @@ const Header = () => {
                             <div className="header_nav-child">
                                 <ul className="">
                                     <li>
-                                        <a href="">My profile</a>
+                                        <Link to="/profile">My profile</Link>
                                     </li>
                                     <li>
-                                        <a href="">Logout</a>
+                                        <Link to="/login">Log out</Link>
                                     </li>
                                 </ul>
                             </div>
