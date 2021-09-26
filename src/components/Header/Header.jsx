@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useContext } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import PersonIcon from '@mui/icons-material/Person'
 import MessageIcon from '@mui/icons-material/Message'
@@ -6,12 +6,15 @@ import NotificationsIcon from '@mui/icons-material/Notifications'
 import AccountCircle from '@mui/icons-material/AccountCircle'
 import { Link } from 'react-router-dom'
 import './Header.scss'
+import { AuthContext } from '../../contexts/AuthContext'
+
 const Header = () => {
     const [searchState, setSearchState] = useState('')
     const [newFriends, setNewFriends] = useState([1, 2, 3])
     const [newMessage, setnewMessage] = useState([])
     const [newNotifications, setnewNotifications] = useState([1, 2])
     const [userMenu, setUserMenu] = useState(false)
+    const { logoutUser } = useContext(AuthContext)
     return (
         <Fragment>
             <div className="header">
@@ -85,9 +88,7 @@ const Header = () => {
                                     <li>
                                         <Link to="/profile">My profile</Link>
                                     </li>
-                                    <li>
-                                        <Link to="/login">Log out</Link>
-                                    </li>
+                                    <li onClick={logoutUser}>Logout</li>
                                 </ul>
                             </div>
                         )}

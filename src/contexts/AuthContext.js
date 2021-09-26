@@ -1,14 +1,8 @@
 import { createContext, useState, useEffect, useReducer } from 'react'
-import { authReducer } from '../reducers/authReducer'
-import { setAuthToken } from '../utils/setAuthToken'
+import setAuthToken from '../utils/setAuthToken'
 import { login, register, getUser } from '../utils/api'
 export const AuthContext = createContext()
 const AuthContextProvider = ({ children }) => {
-    // const [authState, dispatch] = useReducer(authReducer, {
-    //     authLoading: true,
-    //     isAuthenticated: false,
-    //     user: null
-    // })
     const [authState, setAuthState] = useState({
         authLoading: true,
         isAuthenticated: false,
@@ -35,9 +29,10 @@ const AuthContextProvider = ({ children }) => {
     const loginUser = async (data) => {
         try {
             const res = await login(data)
-            console.log(res)
             if (res.data.success) {
                 localStorage.setItem('tokenUser', res.data)
+
+                setAuthToken(res.data.jwtSign)
                 loadUser()
             }
             return { success: true, data: res.data }
@@ -48,7 +43,7 @@ const AuthContextProvider = ({ children }) => {
     }
     const registerUser = async (data) => {
         try {
-            const res = await login(data)
+            const res = await register(data)
             console.log(res)
             if (res.data.success) {
                 localStorage.setItem('tokenUser', res.data)

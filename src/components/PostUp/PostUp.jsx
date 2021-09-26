@@ -6,8 +6,8 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined'
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
-const PostUp = ({ data }) => {
-    const { username, time, img, post } = data
+const PostUp = ({ post }) => {
+    // const { username, time, img, post } = data
     return (
         <Fragment>
             <div className="post_up">

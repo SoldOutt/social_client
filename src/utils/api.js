@@ -49,6 +49,6 @@ export const likePost = async (idPost) => {
     return res
 }
 export const getTimeline = async () => {
-    const res = await axios.put(`${url}/post/timeline`)
+    const res = await axios.get(`${url}/post/timeline`)
     return res
 }
